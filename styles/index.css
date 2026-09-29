@@ -63,8 +63,8 @@ footer a img {
   border-radius: 0%;      /* скругление углов */
   width: 6em;            /* ширина, зависящая от размера шрифта */
   height: 6em;           /* высота, равная ширине (квадрат) */
-  padding: 1em;
-  padding-top: 0px;
+  margin: 1em;
+  margin-top: 0px;
   object-fit: cover;       /* чтобы изображение не искажалось */
 }
 
