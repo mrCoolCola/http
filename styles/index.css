@@ -20,9 +20,10 @@ footer {
   color: white;
   text-align: center;
 }
-footer a img {
+footer img {
   height: 31px;
   width: 88px;
+  transition: 50ms;
 }
 footer img:hover {
   position: relative;
