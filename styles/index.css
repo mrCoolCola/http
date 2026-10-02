@@ -24,6 +24,11 @@ footer a img {
   height: 31px;
   width: 88px;
 }
+footer img:hover {
+  position: relative;
+  scale: 1.5;
+  transition: 100ms;
+}
 
 .image {
     position: fixed;
