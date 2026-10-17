@@ -20,9 +20,20 @@ footer {
   color: white;
   text-align: center;
 }
+footer>a {
+  max-width: 31px;
+  min-width: 31px;
+  max-height: 88px;
+  min-height: 88px;
+}
 footer img {
   height: 31px;
+  max-height: 31px;
+  min-height: 31px;
   width: 88px;
+  max-width: 88px;
+  min-width: 88px;
+  background-color: #031b34;
   transition: 50ms;
 }
 footer img:hover {

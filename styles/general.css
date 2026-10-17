@@ -47,12 +47,20 @@ body {
   display: block;
 }
 
-.sidenav a:hover {
-  color: #064579;
-}
-
-.link {
+/* unvisited link */
+a:link {
   color: #A8E6FF;
+  text-decoration: none;
+}
+/* visited link */
+a:visited {
+  color: #2196F3;
+  text-decoration: none;
+}
+/* hovered/selected link */
+a:hover, a:active {
+  color: #1565a7;
+  text-decoration: underline;
 }
 
 @keyframes gradient {
