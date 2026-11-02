@@ -6,31 +6,23 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta http-equiv="onion-location" content="http://c5ncg6tlhjh6x4bmur2zpvtuqda3qhps5or6bl3ju56dlt7pnph6dlyd.onion/playground.html">
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/98.css"
-    >
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
     <script src="scripts/kao.js"></script>
-    <script type="module">
-        import { rainbowCursor } from "./scripts/esm.js";
-        new rainbowCursor({
-            length: 50,
-            colors: ["white", "blue", "red"],
-            size: 4,
-        });
-    </script>
 </head>
 <body onload="countdown();">
     This page is where i will drop everything i like but not suits main pages
     <ins>test</ins>
     <del>test</del>
-    <div class="window" style="margin: 32px; width: 250px; filter: drop-shadow(.3rem .3rem 0rem #0000006d)">
+    
+    <div class="window" id="kaow" style="margin: 32px; width: 250px; filter: drop-shadow(.3rem .3rem 0rem #0000006d)">
         <div class="title-bar">
         <div class="title-bar-text">
             Keep Android Open
         </div>
         <div class="title-bar-controls">
-            <button aria-label="Close"></button>
+            <!-- window closer -->
+            <script>function kao_close(){document.getElementById("kaow").remove()}</script>
+            <button onclick="kao_close()" aria-label="Close"></button>
         </div>
         </div>
         <div class="window-body">
