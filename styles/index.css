@@ -1,11 +1,22 @@
+body {
+  min-height: 100%;
+  height: max-content;
+}
+
 .container {
   height: fit-content + 4em;
 }
 
-body {
-  min-height: 100%;
-  height: max-content;
-  padding-bottom: 6em; /* высота футера + желаемое расстояние */
+.heading-text {
+  h1 {
+    margin: 0;               /* убираем лишние отступы */
+    font-size: 1.8rem;       /* пример размера заголовка */
+    line-height: 1.2;
+  }
+  p {
+    margin: 5px 0 0;         /* небольшой отступ сверху */
+    font-size: 1rem;
+  }
 }
 
 footer {
@@ -13,119 +24,52 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: fit-content;
+  height: max-content;
   padding-top: 5px;
-  padding-bottom: 5px;
   background-color: #0a3865;
   color: white;
   text-align: center;
-}
-footer>a {
-  max-width: 31px;
-  min-width: 31px;
-  max-height: 88px;
-  min-height: 88px;
-}
-footer img {
-  height: 31px;
-  max-height: 31px;
-  min-height: 31px;
-  width: 88px;
-  max-width: 88px;
-  min-width: 88px;
-  background-color: #031b34;
-  transition: 50ms;
-}
-footer img:hover {
-  position: relative;
-  scale: 1.5;
-  transition: 100ms;
-}
-
-.image {
-    position: fixed;
-    z-index: 10;
-    bottom: -5px;
+  >a {
+    max-width: 31px;
+    min-width: 31px;
+    max-height: 88px;
+    min-height: 88px;
+  }
+  img {
+    height: 31px;
+    max-height: 31px;
+    min-height: 31px;
+    width: 88px;
+    max-width: 88px;
+    min-width: 88px;
+    background-color: #031b34;
+    transition: 50ms;
+  }
+  img:hover {
+    position: relative;
+    scale: 1.5;
+    transition: 100ms;
+  }
 }
 
-.image > img {
-    width: 103px;
-    image-rendering: pixelated;
-}
-
-.contacts, .about_title {
+/* элементы в строчку */
+.social, .aboutme_title {
   display: flex;
-  align-items: center; /* выравнивание по вертикали (по центру) */
-  gap: 10px;           /* расстояние между элементами */
+  align-items: center;
+  gap: 10px;           
 }
-
-.available_on {
+.aboutme_content {
   display: flex;
-  align-items: center; /* выравнивание по вертикали (по центру) */
-  justify-content: center;
-  gap: 20px;           /* расстояние между элементами */
-  padding-top: 25px;
+  font-size: 16px;
+  .avatar {
+    border-radius: 0%;      /* скругление углов */
+    width: 6em;            /* ширина, зависящая от размера шрифта */
+    height: 6em;           /* высота, равная ширине (квадрат) */
+    margin: 1em;
+    margin-top: 0px;
+    object-fit: cover;       /* чтобы изображение не искажалось */
+  }
 }
 .cool_links li a {
   text-decoration: none;
-}
-.about_content {
-  display: flex;           /* включает Flexbox */
-  /* align-items: center;     вертикальное выравнивание по центру */
-  /* gap: 15px;               отступ между аватаром и текстом */
-  font-size: 16px;         /* базовый размер шрифта (можно изменить) */
-}
-
-.avatar {
-  border-radius: 0%;      /* скругление углов */
-  width: 6em;            /* ширина, зависящая от размера шрифта */
-  height: 6em;           /* высота, равная ширине (квадрат) */
-  margin: 1em;
-  margin-top: 0px;
-  object-fit: cover;       /* чтобы изображение не искажалось */
-}
-
-.heading-text h1 {
-  margin: 0;               /* убираем лишние отступы */
-  font-size: 1.8rem;       /* пример размера заголовка */
-  line-height: 1.2;
-}
-
-.heading-text p {
-  margin: 5px 0 0;         /* небольшой отступ сверху */
-  font-size: 1rem;
-}
-
-.sidebar {
-  position: fixed;
-  top: 20px;
-  left: 10px;
-  width: 130px;  
-  z-index: 1;
-  overscroll-behavior: contain;
-}
-.sidenav2 {
-  width: auto;
-  overflow-x: hidden;
-  padding: 8px 0;
-}
-.sidenav2 a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2196F3;
-  display: block;
-}
-.sidenav2 a:hover {
-  color: #064579;
-}
-.side_buttons {
-  /* display: block; */
-  margin-top: 12px; 
-  height: 45vh;
-  overflow: scroll;
-  overscroll-behavior: contain;
-  scrollbar-width: thin; 
-  display: grid;
-  justify-items: center;
 }

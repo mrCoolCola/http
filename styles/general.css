@@ -2,19 +2,22 @@
   font-family: 'MyFont';
   src: url('../assets/3270NerdFont-Regular.ttf') format('truetype');
 }
+@keyframes gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 body {
   font-family: 'MyFont';
   background: linear-gradient(-45deg, #0b2c4e, #031b34);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-  /* background: #100c08; */
   height: 100vh;
   color: #e5e9f0;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 0px;
   padding: 0px;
-  /* cursor: url('../assets/cursor.ico'), auto; */
 }
 
 * {
@@ -28,23 +31,34 @@ body {
   border-style: dashed;
   border-color: #0a3865;
 }
+
 .sidenav {
-  width: 130px;
   position: fixed;
-  z-index: 1;
   top: 20px;
   left: 10px;
-  /* background: #eee; */
+  width: 130px;  
+  z-index: 1;
+  overscroll-behavior: contain;
+  width: auto;
   overflow-x: hidden;
   padding: 8px 0;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2196F3;
-  display: block;
+  a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2196F3;
+    display: block;
+  }
+  a:hover {
+    color: #064579;
+  }
+  .available_on {
+    display: flex;
+    align-items: center; /* выравнивание по вертикали (по центру) */
+    justify-content: center;
+    gap: 20px;           /* расстояние между элементами */
+    padding-top: 25px;
+  }
 }
 
 /* unvisited link */
@@ -61,16 +75,4 @@ a:visited {
 a:hover, a:active {
   color: #1565a7;
   text-decoration: underline;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
