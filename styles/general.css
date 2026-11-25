@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'MyFont';
+  font-family: '3270 Nerd Font';
   src: url('../assets/3270NerdFont-Regular.ttf') format('truetype');
 }
 @keyframes gradient {
@@ -8,7 +8,7 @@
   100% { background-position: 0% 50%; }
 }
 body {
-  font-family: 'MyFont';
+  font-family: "3270 Nerd Font", "serif", "monospace";
   background: linear-gradient(-45deg, #0b2c4e, #031b34);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
@@ -37,8 +37,8 @@ body {
   top: 20px;
   left: 10px;
   width: 1%;  
-  z-index: 1;
-  overscroll-behavior: contain;
+  z-index: 0;
+  overscroll-behavior: scroll;
   width: auto;
   overflow-x: hidden;
   padding: 8px 0;
